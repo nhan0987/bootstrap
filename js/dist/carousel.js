@@ -81,14 +81,14 @@ var Carousel = function ($) {
     INDICATORS: '.carousel-indicators',
     DATA_SLIDE: '[data-slide], [data-slide-to]',
     DATA_RIDE: '[data-ride="carousel"]'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Carousel = function () {
     function Carousel(element, config) {
       _classCallCheck(this, Carousel);
@@ -466,7 +466,7 @@ var Carousel = function ($) {
       var $carousel = $(this);
       Carousel._jQueryInterface.call($carousel, $carousel.data());
     });
-  });
+  }
 
   /**
    * ------------------------------------------------------------------------
@@ -474,7 +474,7 @@ var Carousel = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Carousel._jQueryInterface;
+  );$.fn[NAME] = Carousel._jQueryInterface;
   $.fn[NAME].Constructor = Carousel;
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;

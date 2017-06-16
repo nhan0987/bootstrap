@@ -60,14 +60,14 @@ var Collapse = function ($) {
   var Selector = {
     ACTIVES: '.card > .show, .card > .collapsing',
     DATA_TOGGLE: '[data-toggle="collapse"]'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Collapse = function () {
     function Collapse(element, config) {
       _classCallCheck(this, Collapse);
@@ -244,8 +244,8 @@ var Collapse = function ($) {
 
     Collapse.prototype._getConfig = function _getConfig(config) {
       config = $.extend({}, Default, config);
-      config.toggle = Boolean(config.toggle); // coerce string values
-      Util.typeCheckConfig(NAME, config, DefaultType);
+      config.toggle = Boolean(config.toggle // coerce string values
+      );Util.typeCheckConfig(NAME, config, DefaultType);
       return config;
     };
 
@@ -338,7 +338,7 @@ var Collapse = function ($) {
     var config = data ? 'toggle' : $(this).data();
 
     Collapse._jQueryInterface.call($(target), config);
-  });
+  }
 
   /**
    * ------------------------------------------------------------------------
@@ -346,7 +346,7 @@ var Collapse = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Collapse._jQueryInterface;
+  );$.fn[NAME] = Collapse._jQueryInterface;
   $.fn[NAME].Constructor = Collapse;
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;

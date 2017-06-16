@@ -52,10 +52,9 @@ var Util = function ($) {
     MozTransition: 'transitionend',
     OTransition: 'oTransitionEnd otransitionend',
     transition: 'transitionend'
-  };
 
-  // shoutout AngusCroll (https://goo.gl/pxwQGp)
-  function toType(obj) {
+    // shoutout AngusCroll (https://goo.gl/pxwQGp)
+  };function toType(obj) {
     return {}.toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
   }
 
@@ -69,7 +68,8 @@ var Util = function ($) {
       delegateType: transition.end,
       handle: function handle(event) {
         if ($(event.target).is(this)) {
-          return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
+          return event.handleObj.handler.apply(this, arguments // eslint-disable-line prefer-rest-params
+          );
         }
         return undefined;
       }
@@ -176,7 +176,7 @@ var Util = function ($) {
   setTransitionEndSupport();
 
   return Util;
-}(jQuery);
+}(jQuery
 
 /**
  * --------------------------------------------------------------------------
@@ -185,7 +185,7 @@ var Util = function ($) {
  * --------------------------------------------------------------------------
  */
 
-var Alert = function ($) {
+);var Alert = function ($) {
 
   /**
    * ------------------------------------------------------------------------
@@ -215,14 +215,14 @@ var Alert = function ($) {
     ALERT: 'alert',
     FADE: 'fade',
     SHOW: 'show'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Alert = function () {
     function Alert(element) {
       _classCallCheck(this, Alert);
@@ -339,7 +339,7 @@ var Alert = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $(document).on(Event.CLICK_DATA_API, Selector.DISMISS, Alert._handleDismiss(new Alert()));
+  $(document).on(Event.CLICK_DATA_API, Selector.DISMISS, Alert._handleDismiss(new Alert())
 
   /**
    * ------------------------------------------------------------------------
@@ -347,7 +347,7 @@ var Alert = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Alert._jQueryInterface;
+  );$.fn[NAME] = Alert._jQueryInterface;
   $.fn[NAME].Constructor = Alert;
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;
@@ -355,7 +355,7 @@ var Alert = function ($) {
   };
 
   return Alert;
-}(jQuery);
+}(jQuery
 
 /**
  * --------------------------------------------------------------------------
@@ -364,7 +364,7 @@ var Alert = function ($) {
  * --------------------------------------------------------------------------
  */
 
-var Button = function ($) {
+);var Button = function ($) {
 
   /**
    * ------------------------------------------------------------------------
@@ -396,14 +396,14 @@ var Button = function ($) {
   var Event = {
     CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY,
     FOCUS_BLUR_DATA_API: 'focus' + EVENT_KEY + DATA_API_KEY + ' ' + ('blur' + EVENT_KEY + DATA_API_KEY)
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Button = function () {
     function Button(element) {
       _classCallCheck(this, Button);
@@ -502,7 +502,7 @@ var Button = function ($) {
   }).on(Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT, function (event) {
     var button = $(event.target).closest(Selector.BUTTON)[0];
     $(button).toggleClass(ClassName.FOCUS, /^focus(in)?$/.test(event.type));
-  });
+  }
 
   /**
    * ------------------------------------------------------------------------
@@ -510,7 +510,7 @@ var Button = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Button._jQueryInterface;
+  );$.fn[NAME] = Button._jQueryInterface;
   $.fn[NAME].Constructor = Button;
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;
@@ -518,7 +518,7 @@ var Button = function ($) {
   };
 
   return Button;
-}(jQuery);
+}(jQuery
 
 /**
  * --------------------------------------------------------------------------
@@ -527,7 +527,7 @@ var Button = function ($) {
  * --------------------------------------------------------------------------
  */
 
-var Carousel = function ($) {
+);var Carousel = function ($) {
 
   /**
    * ------------------------------------------------------------------------
@@ -597,14 +597,14 @@ var Carousel = function ($) {
     INDICATORS: '.carousel-indicators',
     DATA_SLIDE: '[data-slide], [data-slide-to]',
     DATA_RIDE: '[data-ride="carousel"]'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Carousel = function () {
     function Carousel(element, config) {
       _classCallCheck(this, Carousel);
@@ -982,7 +982,7 @@ var Carousel = function ($) {
       var $carousel = $(this);
       Carousel._jQueryInterface.call($carousel, $carousel.data());
     });
-  });
+  }
 
   /**
    * ------------------------------------------------------------------------
@@ -990,7 +990,7 @@ var Carousel = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Carousel._jQueryInterface;
+  );$.fn[NAME] = Carousel._jQueryInterface;
   $.fn[NAME].Constructor = Carousel;
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;
@@ -998,7 +998,7 @@ var Carousel = function ($) {
   };
 
   return Carousel;
-}(jQuery);
+}(jQuery
 
 /**
  * --------------------------------------------------------------------------
@@ -1007,7 +1007,7 @@ var Carousel = function ($) {
  * --------------------------------------------------------------------------
  */
 
-var Collapse = function ($) {
+);var Collapse = function ($) {
 
   /**
    * ------------------------------------------------------------------------
@@ -1056,14 +1056,14 @@ var Collapse = function ($) {
   var Selector = {
     ACTIVES: '.card > .show, .card > .collapsing',
     DATA_TOGGLE: '[data-toggle="collapse"]'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Collapse = function () {
     function Collapse(element, config) {
       _classCallCheck(this, Collapse);
@@ -1240,8 +1240,8 @@ var Collapse = function ($) {
 
     Collapse.prototype._getConfig = function _getConfig(config) {
       config = $.extend({}, Default, config);
-      config.toggle = Boolean(config.toggle); // coerce string values
-      Util.typeCheckConfig(NAME, config, DefaultType);
+      config.toggle = Boolean(config.toggle // coerce string values
+      );Util.typeCheckConfig(NAME, config, DefaultType);
       return config;
     };
 
@@ -1334,7 +1334,7 @@ var Collapse = function ($) {
     var config = data ? 'toggle' : $(this).data();
 
     Collapse._jQueryInterface.call($(target), config);
-  });
+  }
 
   /**
    * ------------------------------------------------------------------------
@@ -1342,7 +1342,7 @@ var Collapse = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Collapse._jQueryInterface;
+  );$.fn[NAME] = Collapse._jQueryInterface;
   $.fn[NAME].Constructor = Collapse;
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;
@@ -1350,7 +1350,7 @@ var Collapse = function ($) {
   };
 
   return Collapse;
-}(jQuery);
+}(jQuery
 
 /**
  * --------------------------------------------------------------------------
@@ -1359,7 +1359,7 @@ var Collapse = function ($) {
  * --------------------------------------------------------------------------
  */
 
-var Dropdown = function ($) {
+);var Dropdown = function ($) {
 
   /**
    * ------------------------------------------------------------------------
@@ -1403,14 +1403,14 @@ var Dropdown = function ($) {
     ROLE_LISTBOX: '[role="listbox"]',
     NAVBAR_NAV: '.navbar-nav',
     VISIBLE_ITEMS: '[role="menu"] li:not(.disabled) a, ' + '[role="listbox"] li:not(.disabled) a'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Dropdown = function () {
     function Dropdown(element) {
       _classCallCheck(this, Dropdown);
@@ -1617,7 +1617,7 @@ var Dropdown = function ($) {
 
   $(document).on(Event.KEYDOWN_DATA_API, Selector.DATA_TOGGLE, Dropdown._dataApiKeydownHandler).on(Event.KEYDOWN_DATA_API, Selector.ROLE_MENU, Dropdown._dataApiKeydownHandler).on(Event.KEYDOWN_DATA_API, Selector.ROLE_LISTBOX, Dropdown._dataApiKeydownHandler).on(Event.CLICK_DATA_API + ' ' + Event.FOCUSIN_DATA_API, Dropdown._clearMenus).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, Dropdown.prototype.toggle).on(Event.CLICK_DATA_API, Selector.FORM_CHILD, function (e) {
     e.stopPropagation();
-  });
+  }
 
   /**
    * ------------------------------------------------------------------------
@@ -1625,7 +1625,7 @@ var Dropdown = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Dropdown._jQueryInterface;
+  );$.fn[NAME] = Dropdown._jQueryInterface;
   $.fn[NAME].Constructor = Dropdown;
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;
@@ -1633,7 +1633,7 @@ var Dropdown = function ($) {
   };
 
   return Dropdown;
-}(jQuery);
+}(jQuery
 
 /**
  * --------------------------------------------------------------------------
@@ -1642,7 +1642,7 @@ var Dropdown = function ($) {
  * --------------------------------------------------------------------------
  */
 
-var Modal = function ($) {
+);var Modal = function ($) {
 
   /**
    * ------------------------------------------------------------------------
@@ -1701,14 +1701,14 @@ var Modal = function ($) {
     DATA_TOGGLE: '[data-toggle="modal"]',
     DATA_DISMISS: '[data-dismiss="modal"]',
     FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Modal = function () {
     function Modal(element, config) {
       _classCallCheck(this, Modal);
@@ -1894,8 +1894,8 @@ var Modal = function ($) {
     Modal.prototype._enforceFocus = function _enforceFocus() {
       var _this12 = this;
 
-      $(document).off(Event.FOCUSIN) // guard against infinite focus loop
-      .on(Event.FOCUSIN, function (event) {
+      $(document).off(Event.FOCUSIN // guard against infinite focus loop
+      ).on(Event.FOCUSIN, function (event) {
         if (document !== event.target && _this12._element !== event.target && !$(_this12._element).has(event.target).length) {
           _this12._element.focus();
         }
@@ -2146,7 +2146,7 @@ var Modal = function ($) {
     });
 
     Modal._jQueryInterface.call($(target), config, this);
-  });
+  }
 
   /**
    * ------------------------------------------------------------------------
@@ -2154,7 +2154,7 @@ var Modal = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Modal._jQueryInterface;
+  );$.fn[NAME] = Modal._jQueryInterface;
   $.fn[NAME].Constructor = Modal;
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;
@@ -2162,7 +2162,7 @@ var Modal = function ($) {
   };
 
   return Modal;
-}(jQuery);
+}(jQuery
 
 /**
  * --------------------------------------------------------------------------
@@ -2171,7 +2171,7 @@ var Modal = function ($) {
  * --------------------------------------------------------------------------
  */
 
-var ScrollSpy = function ($) {
+);var ScrollSpy = function ($) {
 
   /**
    * ------------------------------------------------------------------------
@@ -2227,14 +2227,14 @@ var ScrollSpy = function ($) {
   var OffsetMethod = {
     OFFSET: 'offset',
     POSITION: 'position'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var ScrollSpy = function () {
     function ScrollSpy(element, config) {
       var _this18 = this;
@@ -2458,7 +2458,7 @@ var ScrollSpy = function ($) {
       var $spy = $(scrollSpys[i]);
       ScrollSpy._jQueryInterface.call($spy, $spy.data());
     }
-  });
+  }
 
   /**
    * ------------------------------------------------------------------------
@@ -2466,7 +2466,7 @@ var ScrollSpy = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = ScrollSpy._jQueryInterface;
+  );$.fn[NAME] = ScrollSpy._jQueryInterface;
   $.fn[NAME].Constructor = ScrollSpy;
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;
@@ -2474,7 +2474,7 @@ var ScrollSpy = function ($) {
   };
 
   return ScrollSpy;
-}(jQuery);
+}(jQuery
 
 /**
  * --------------------------------------------------------------------------
@@ -2483,7 +2483,7 @@ var ScrollSpy = function ($) {
  * --------------------------------------------------------------------------
  */
 
-var Tab = function ($) {
+);var Tab = function ($) {
 
   /**
    * ------------------------------------------------------------------------
@@ -2526,14 +2526,14 @@ var Tab = function ($) {
     DATA_TOGGLE: '[data-toggle="tab"], [data-toggle="pill"]',
     DROPDOWN_TOGGLE: '.dropdown-toggle',
     DROPDOWN_ACTIVE_CHILD: '> .dropdown-menu .active'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Tab = function () {
     function Tab(element) {
       _classCallCheck(this, Tab);
@@ -2712,7 +2712,7 @@ var Tab = function ($) {
   $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
     event.preventDefault();
     Tab._jQueryInterface.call($(this), 'show');
-  });
+  }
 
   /**
    * ------------------------------------------------------------------------
@@ -2720,7 +2720,7 @@ var Tab = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Tab._jQueryInterface;
+  );$.fn[NAME] = Tab._jQueryInterface;
   $.fn[NAME].Constructor = Tab;
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;
@@ -2728,7 +2728,7 @@ var Tab = function ($) {
   };
 
   return Tab;
-}(jQuery);
+}(jQuery
 
 /* global Tether */
 
@@ -2739,7 +2739,7 @@ var Tab = function ($) {
  * --------------------------------------------------------------------------
  */
 
-var Tooltip = function ($) {
+);var Tooltip = function ($) {
 
   /**
    * Check for Tether dependency
@@ -2836,14 +2836,14 @@ var Tooltip = function ($) {
     FOCUS: 'focus',
     CLICK: 'click',
     MANUAL: 'manual'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Tooltip = function () {
     function Tooltip(element, config) {
       _classCallCheck(this, Tooltip);
@@ -3347,7 +3347,7 @@ var Tooltip = function ($) {
   };
 
   return Tooltip;
-}(jQuery);
+}(jQuery
 
 /**
  * --------------------------------------------------------------------------
@@ -3356,7 +3356,7 @@ var Tooltip = function ($) {
  * --------------------------------------------------------------------------
  */
 
-var Popover = function ($) {
+);var Popover = function ($) {
 
   /**
    * ------------------------------------------------------------------------
@@ -3402,14 +3402,14 @@ var Popover = function ($) {
     FOCUSOUT: 'focusout' + EVENT_KEY,
     MOUSEENTER: 'mouseenter' + EVENT_KEY,
     MOUSELEAVE: 'mouseleave' + EVENT_KEY
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Popover = function (_Tooltip) {
     _inherits(Popover, _Tooltip);
 
@@ -3430,10 +3430,10 @@ var Popover = function ($) {
     };
 
     Popover.prototype.setContent = function setContent() {
-      var $tip = $(this.getTipElement());
+      var $tip = $(this.getTipElement()
 
       // we use append for html objects to maintain js events
-      this.setElementContent($tip.find(Selector.TITLE), this.getTitle());
+      );this.setElementContent($tip.find(Selector.TITLE), this.getTitle());
       this.setElementContent($tip.find(Selector.CONTENT), this._getContent());
 
       $tip.removeClass(ClassName.FADE + ' ' + ClassName.SHOW);
@@ -3530,6 +3530,41 @@ var Popover = function ($) {
   };
 
   return Popover;
-}(jQuery);
+}(jQuery);(function (window, $) {
+
+  $(function () {
+
+    $('.ripple').on('click', function (event) {
+      event.preventDefault();
+
+      var $div = $('<div/>'),
+          btnOffset = $(this).offset(),
+          xPos = event.pageX - btnOffset.left,
+          yPos = event.pageY - btnOffset.top;
+
+      $div.addClass('ripple-effect');
+      var $ripple = $(".ripple-effect");
+
+      $ripple.css("height", $(this).height());
+      $ripple.css("width", $(this).height());
+      $div.css({
+        top: yPos - $ripple.height() / 2,
+        left: xPos - $ripple.width() / 2,
+        background: $(this).data("ripple-color")
+      }).appendTo($(this));
+
+      window.setTimeout(function () {
+        $div.remove();
+      }, 2000);
+    });
+  });
+})(window, jQuery);
+//# sourceMappingURL=effects.js.map
+//# sourceMappingURL=effects.js.map
+//# sourceMappingURL=effects.js.map
+//# sourceMappingURL=effects.js.map
+//# sourceMappingURL=effects.js.map
+//# sourceMappingURL=effects.js.map
+//# sourceMappingURL=effects.js.map
 
 }();

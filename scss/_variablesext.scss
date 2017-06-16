@@ -1,0 +1,160 @@
+//Colors
+$amber:        #ffc107 !default;
+$aqua:         #00ffff !default;
+$blue:         #2196f3;
+$light-blue:   #87ceeb !default;
+$brown:        #795548 !default;
+$cyan:         #00bcd4 !default;
+$green:        #4caf50;
+$light-green:  #8bc34a !default;
+$indigo:       #3f51b5 !default;
+$khaki:        #f0e68c !default;
+$lime:         #cddc39 !default;
+$orange:  	   #ff9800;
+$deep-orange:  #ff5722 !default;
+$pink:         #e91e63;
+$deep-purple:  #9c27b0 !default;
+$red:          #f44336;
+$sand:         #fdf5e6 !default;
+$teal:         #009688;
+$yellow:       #ffeb3b;
+$white:        #fff;
+$black:        #000;
+$grey:         #bbb;
+$mountain-meadow:  #1bbc9b !default;
+$shakespeare: 		#52b3d9 !default;
+$lightning-yellow: #f5ab35 !default;
+$valencia:			#d64541 !default;
+
+// Form states and alerts
+//
+// Define colors for form feedback states and, by default, alerts.
+
+$state-success-text:             $white;
+$state-success-bg:               $mountain-meadow;
+$state-success-border:           darken($state-success-bg, 5%);
+
+$state-info-text:                $white;
+$state-info-bg:                  $shakespeare;
+$state-info-border:              darken($state-info-bg, 7%);
+
+$state-warning-text:             $white;
+$state-warning-bg:               $lightning-yellow;
+$state-warning-border:           darken($state-warning-bg, 5%);
+
+$state-danger-text:              $white;
+$state-danger-bg:                $valencia;
+$state-danger-border:            darken($state-danger-bg, 5%);
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-radius:          1px;
+$box-shadow-material:    0 1px 1px 0 rgba(56, 62, 70, .43);
+
+
+// Reassign color vars to semantic color scheme
+$brand-success:             $mountain-meadow;
+$brand-info:                $shakespeare;
+$brand-warning:             $lightning-yellow;
+$brand-danger:              $valencia;
+
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+$alert-border-radius:         $border-radius;
+
+$alert-success-bg:            $state-success-bg;
+$alert-success-text:          $state-success-text;
+$alert-success-border:        $state-success-border;
+
+$alert-info-bg:               $state-info-bg;
+$alert-info-text:             $state-info-text;
+$alert-info-border:           $state-info-border;
+
+$alert-warning-bg:            $state-warning-bg;
+$alert-warning-text:          $state-warning-text;
+$alert-warning-border:        $state-warning-border;
+
+$alert-danger-bg:             $state-danger-bg;
+$alert-danger-text:           $state-danger-text;
+$alert-danger-border:         $state-danger-border;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background and border color.
+$btn-box-shadow:                 $box-shadow-material;
+$btn-focus-box-shadow:           none;
+$btn-active-box-shadow:          $box-shadow-material;
+
+$btn-secondary-color:            $gray-dark;
+$btn-secondary-bg:               $white;
+$btn-secondary-border:           #ccc;
+
+$btn-info-color:                 $white;
+$btn-info-bg:                    $brand-info;
+$btn-info-border:                $btn-info-bg;
+
+$btn-success-color:              $white !default;
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             $btn-success-bg;
+
+$btn-warning-color:              $white !default;
+$btn-warning-bg:                 $brand-warning;
+$btn-warning-border:             $btn-warning-bg;
+
+$btn-danger-color:               $white !default;
+$btn-danger-bg:                  $brand-danger;
+$btn-danger-border:              $btn-danger-bg;
+
+$btn-link-disabled-color:        $gray-light;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:              $border-radius;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-shadows:            true;
+
+//Form
+$input-border-radius:            $border-radius;
+$custom-checkbox-radius:         $border-radius;
+$custom-select-border-radius:    $border-radius;
+$custom-file-border-radius:      $border-radius;
+
+// Navbar
+
+$navbar-border-radius:              $border-radius;
+$nav-tabs-border-radius:            $border-radius;
+$nav-pills-border-radius:           $border-radius;
+// Cards
+
+$card-border-radius:       $border-radius;
+
+// Progress bars
+
+$progress-border-radius:        $border-radius;
+
+// List group
+
+$list-group-border-radius:       $border-radius;
+
+// Image thumbnails
+
+$thumbnail-border-radius:     $border-radius;
+
+//Effects
+
+$ripple-effect-border-background: $white;
+
+
+
+
+
+
+
+

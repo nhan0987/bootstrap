@@ -70,14 +70,14 @@ var Modal = function ($) {
     DATA_TOGGLE: '[data-toggle="modal"]',
     DATA_DISMISS: '[data-dismiss="modal"]',
     FIXED_CONTENT: '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
   };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
   var Modal = function () {
     function Modal(element, config) {
       _classCallCheck(this, Modal);
@@ -263,8 +263,8 @@ var Modal = function ($) {
     Modal.prototype._enforceFocus = function _enforceFocus() {
       var _this4 = this;
 
-      $(document).off(Event.FOCUSIN) // guard against infinite focus loop
-      .on(Event.FOCUSIN, function (event) {
+      $(document).off(Event.FOCUSIN // guard against infinite focus loop
+      ).on(Event.FOCUSIN, function (event) {
         if (document !== event.target && _this4._element !== event.target && !$(_this4._element).has(event.target).length) {
           _this4._element.focus();
         }
@@ -515,7 +515,7 @@ var Modal = function ($) {
     });
 
     Modal._jQueryInterface.call($(target), config, this);
-  });
+  }
 
   /**
    * ------------------------------------------------------------------------
@@ -523,7 +523,7 @@ var Modal = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME] = Modal._jQueryInterface;
+  );$.fn[NAME] = Modal._jQueryInterface;
   $.fn[NAME].Constructor = Modal;
   $.fn[NAME].noConflict = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT;
