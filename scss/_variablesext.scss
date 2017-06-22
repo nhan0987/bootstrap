@@ -50,15 +50,25 @@ $state-danger-border:            darken($state-danger-bg, 5%);
 //
 // Define common padding and border radius sizes and more.
 
+$border-color:           rgba($black,.125);
 $border-radius:          1px;
 $box-shadow-material:    0 1px 1px 0 rgba(56, 62, 70, .43);
+$block-wrap-box-shadow:       0 0 2px 0 rgba(0,0,0, .12), 0 2px 2px 0 rgba(0,0,0, .24);
+$block-wrap-hover-box-shadow:  0 0 8px 0 rgba(0,0,0, .12), 0 8px 8px 0 rgba(0,0,0, .24);
 
 
 // Reassign color vars to semantic color scheme
+$brand-primary:             $blue;
 $brand-success:             $mountain-meadow;
 $brand-info:                $shakespeare;
 $brand-warning:             $lightning-yellow;
 $brand-danger:              $valencia;
+
+// Links
+//
+// Style anchor elements.
+
+$link-cursor: pointer !default;
 
 
 // Alerts
@@ -86,8 +96,12 @@ $alert-danger-border:         $state-danger-border;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 $btn-box-shadow:                 $box-shadow-material;
-$btn-focus-box-shadow:           none;
-$btn-active-box-shadow:          $box-shadow-material;
+$btn-focus-box-shadow:           0;
+$btn-active-box-shadow:          0;
+
+$btn-primary-color:              $white;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             $btn-primary-bg;
 
 $btn-secondary-color:            $gray-dark;
 $btn-secondary-bg:               $white;
@@ -150,6 +164,8 @@ $thumbnail-border-radius:     $border-radius;
 //Effects
 
 $ripple-effect-border-background: $white;
+
+
 
 
 

@@ -16,28 +16,144 @@ html {
 }
 
 .aqua {
-  background-color: #00ffff;
+  background-color: #00ffff !important;
 }
 
 .amber {
-  background-color: #ffc107;
+  background-color: #ffc107 !important;
 }
 
 .blue {
-  background-color: #2196f3;
+  color: #fff !important;
+  background-color: #2196f3 !important;
+}
+
+.light-blue {
+  background-color: #87ceeb !important;
+}
+
+.brown {
+  background-color: #795548 !important;
+}
+
+.cyan {
+  background-color: #00bcd4 !important;
+}
+
+.green {
+  background-color: #4caf50 !important;
+}
+
+.light-green {
+  background-color: #8bc34a !important;
+}
+
+.indigo {
+  background-color: #3f51b5 !important;
+}
+
+.khaki {
+  background-color: #f0e68c !important;
+}
+
+.lime {
+  background-color: #cddc39 !important;
+}
+
+.orange {
+  background-color: #ff9800 !important;
+}
+
+.deep-orange {
+  color: #fff !important;
+  background-color: #ff5722 !important;
+}
+
+.pink {
+  background-color: #e91e63 !important;
+}
+
+.deep-purple {
+  color: #fff !important;
+  background-color: #9c27b0 !important;
+}
+
+.red {
+  background-color: #f44336 !important;
+}
+
+.sand {
+  background-color: #fdf5e6 !important;
+}
+
+.teal {
+  background-color: #009688 !important;
+}
+
+.yellow {
+  background-color: #ffeb3b !important;
+}
+
+.white {
+  background-color: #fff !important;
+}
+
+.black {
+  color: #fff !important;
+  background-color: #000 !important;
+}
+
+.grey {
+  background-color: #bbb !important;
+}
+
+.mountain-meadow {
+  background-color: #1bbc9b !important;
+}
+
+.shakespeare {
+  background-color: #52b3d9 !important;
+}
+
+.lightning-yellow {
+  background-color: #f5ab35 !important;
+}
+
+.valencia {
+  background-color: #d64541 !important;
+}
+
+.gray-dark {
+  background-color: #292b2c !important;
+}
+
+.gray {
+  background-color: #464a4c !important;
+}
+
+.gray-light {
+  background-color: #636c72 !important;
+}
+
+.gray-lighter {
+  background-color: #eceeef !important;
+}
+
+.gray-lightest {
+  background-color: #f7f7f9 !important;
 }
 
 .ripple {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 .ripple-effect {
   position: absolute;
-  border-radius: 50%;
   width: 50px;
   height: 50px;
   background: #fff;
+  border-radius: 50%;
   -webkit-animation: ripple-animation 2s;
        -o-animation: ripple-animation 2s;
           animation: ripple-animation 2s;
@@ -45,43 +161,79 @@ html {
 
 @-webkit-keyframes ripple-animation {
   from {
+    opacity: .4;
     -webkit-transform: scale(1);
             transform: scale(1);
-    opacity: .4;
   }
   to {
+    opacity: 0;
     -webkit-transform: scale(100);
             transform: scale(100);
-    opacity: 0;
   }
 }
 
 @-o-keyframes ripple-animation {
   from {
+    opacity: .4;
     -o-transform: scale(1);
        transform: scale(1);
-    opacity: .4;
   }
   to {
+    opacity: 0;
     -o-transform: scale(100);
        transform: scale(100);
-    opacity: 0;
   }
 }
 
 @keyframes ripple-animation {
   from {
+    opacity: .4;
     -webkit-transform: scale(1);
          -o-transform: scale(1);
             transform: scale(1);
-    opacity: .4;
   }
   to {
+    opacity: 0;
     -webkit-transform: scale(100);
          -o-transform: scale(100);
             transform: scale(100);
-    opacity: 0;
   }
+}
+
+.raised {
+  -webkit-box-shadow: 0 1px 1px 0 rgba(56, 62, 70, 0.43);
+          box-shadow: 0 1px 1px 0 rgba(56, 62, 70, 0.43);
+}
+
+.click-able {
+  cursor: pointer;
+}
+
+.block-wrap {
+  -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+.block-wrap:hover {
+  z-index: 2;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
+}
+
+.md-18 {
+  font-size: 18px;
+}
+
+.md-24 {
+  font-size: 24px;
+}
+
+.md-36 {
+  font-size: 36px;
+}
+
+.md-48 {
+  font-size: 48px;
 }
 
 .container {

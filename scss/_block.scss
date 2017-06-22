@@ -1,0 +1,7 @@
+.block-wrap {
+  box-shadow: $block-wrap-box-shadow;
+  &:hover {
+    z-index: 2;
+    box-shadow: $block-wrap-hover-box-shadow;
+  }
+}
